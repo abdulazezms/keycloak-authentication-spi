@@ -1,6 +1,3 @@
-# Full Stack Ecommerce Project
-
-
 ## Table of Contents
 
 - [Description](#description)
