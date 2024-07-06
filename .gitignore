@@ -36,7 +36,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-*.jar
-theme
-META-INF
 .idea
