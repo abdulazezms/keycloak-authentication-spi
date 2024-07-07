@@ -19,8 +19,6 @@ This project provides a method for creating a custom authentication flow, utiliz
 - **Credential Providers:** Implementation of a custom credential provider.
 - **Authentication Providers:** Implementation of a custom authentication provider.
 - **Required Action Providers:** Implementation of a custom required action provider.
-- **Pattern Credential:** Creates a new credential type, a simple pattern, for the sake of the example.
-
 
 ## Deployment
 To package the sources, build the image, and deploy the services:
