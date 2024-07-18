@@ -46,7 +46,7 @@ The below browser flow has been created. The flow has 3 alternatives. The last a
 
   - Ensure that all alternative flows align with your security needs. For example, a user may go through 2FA whenever he is redirected by client X that is using your custom browser flow. However, if that same user was being redirected by another client Y that is not using your custom browser flow, then the user will not go through the steps in your custom flow.
   - Consider adding an implementation of PasswordPolicyProvider if your credential provider is using a new type of password-like credential. Have a look at the built-in implementations of PasswordPolicyProvider.
-  - In a real scenario, hash any secret data before persisting. For simplicity, the credentials are not hashed when stored in this example.
+  - For simplicity, the credentials are not hashed when stored in this example. Keycloak will not do that when you are using your custom credential provider.
 
 ## Appendix
 
