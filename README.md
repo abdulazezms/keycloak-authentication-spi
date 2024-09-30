@@ -1,9 +1,7 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Features](#features)
 - [Deployment](#deployment)
-- [Usage](#usage)
 - [Testing the Flow](#testing-the-flow)
 - [Authentication Flow](#authentication-flow)
 - [Security Considerations](#security-considerations)
@@ -11,14 +9,7 @@
 
 ## Description
 
-This project provides a method for creating a custom authentication flow, utilizing an authentication, credential, and required action providers. 
-
-## Features
-
-- **Two-Factor Authentication (2FA):** Adds a second factor authentication using an SPI.
-- **Credential Providers:** Implementation of a custom credential provider.
-- **Authentication Providers:** Implementation of a custom authentication provider.
-- **Required Action Providers:** Implementation of a custom required action provider.
+This project provides a method for creating a custom two-factor authentication flow. To achieve this, authenticator, required action, and credential providers are implemented.
 
 ## Deployment
 To package the sources, build the image, and deploy the services:
@@ -35,7 +26,7 @@ This will also copy a preconfigured realm with a custom authentication flow util
 - **Preconfigured User:** To test the flow, go to [http://localhost:8080/realms/example/account](http://localhost:8080/realms/example/account) and authenticate using:
     - **Username:** `demo@example.com`
     - **Password:** `demo`
-    - **2FA Setup:** As part of the realm configuration, the 2FA flow is already configured and is used by the account-console client. Therefore, as part of your first login, you will have to set up the 2FA.
+    - **2FA Setup:** As part of the realm configuration, the custom 2FA flow is already configured and is used by the account-console client. Therefore, as part of your first login, you will have to set up the 2FA.
 
 ## Authentication Flow
 The below browser flow has been created. The flow has 3 alternatives. The last alternative is the one configured to use the authentication SPI for the 2FA after normal login. The account-console client browser flow was overriden to use it. As part of the implementation of the authentication SPI, it is adding a required action using the implemented provider for the user to complete. The required action is creating the credential that was implemented using the credential provider.
